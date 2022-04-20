@@ -40,14 +40,13 @@ songs = [
 ]
 
 
-
-songs.each do |attribute|
-    user = User.find 1
-    user.songs.create attribute
-    puts "creating #{attribute}"
+users.each do |attribute|
+  User.create attribute
+  puts "creating #{attribute}"
 end
 
-users.each do |attribute|
-    User.create attribute
-    puts "creating #{attribute}"
+songs.each do |attribute|
+  user = User.find 1
+  user.songs.create attribute
+  puts "creating #{attribute}"
 end
