@@ -2,22 +2,19 @@ require 'rails_helper'
 
 RSpec.describe "Songs", type: :request do
   describe "GET /index" do
-    it "gets a list of song" do
-      User.create(
-        email: 'email@email.com'
-      )
-      user= User.find 1
-      expect(user.email).to eq 'email@email.com'
-      # Song.create(
-      #   title: "Alien Boy",
-      #   artist: "Oliver Tree"
-      # )
-      # get '/songs'
-      # song = JSON.parse(response.body)
-      # expect(response).to have_http_status(200)
-      # expect(song.length).to eq 1
-    end
+    it "get a list of all the songs" do
+      user = User.create(email: 'yolo@aol.com', password: 'coolguy55', password_confirmation: 'coolguy55')
+      song = user.songs.create!(
+      title: "i miss the old Kayne",
+      artist: "Kayne"
+    )  
+    get '/songs' 
+    song_response = JSON.parse(response.body)
+    p song_response
+    expect(song_response[0]["title"]).to eq "i miss the old Kayne"
   end
+  end
+
   #   describe "POST /create" do
   #     it "add song" do
   #       song_params = {
