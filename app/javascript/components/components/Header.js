@@ -1,5 +1,17 @@
 import React, { Component } from 'react'
-import { Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarText, NavbarToggler, NavItem, NavLink, UncontrolledDropdown } from 'reactstrap'
+import {
+  Collapse,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarText,
+  NavbarToggler,
+  NavItem,
+  UncontrolledDropdown
+} from 'reactstrap'
 
 class Header extends Component {
   render() {
@@ -31,12 +43,12 @@ class Header extends Component {
                 className="me-auto"
                 navbar
               >
-                {!logged_in &&
+                {
                   <NavItem>
                     <a href="/SongShow" className="nav-link">Generator</a>
                   </NavItem>
                 }
-                {!logged_in &&
+                {
                   <NavItem>
                     <a href="/About" className="nav-link">About</a>
                   </NavItem>

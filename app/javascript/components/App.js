@@ -15,21 +15,19 @@ import About from './pages/About'
 class App extends React.Component {
   render() {
     return (
-      <>
+
+      <Router>
         <Header {...this.props} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/songindex" component={SongIndex} />
+          <Route path="/songshow" component={SongShow} />
+          <Route path="/songnew" component={SongNew} />
+          <Route path="/songedit" component={SongEdit} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
 
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/songindex" component={SongIndex} />
-            <Route path="/songshow" component={SongShow} />
-            <Route path="/songnew" component={SongNew} />
-            <Route path="/songedit" component={SongEdit} />
-            <Route path="/about" component={About} />
-          </Switch>
-        </Router>
-
-      </>
     );
   }
 }
