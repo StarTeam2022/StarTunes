@@ -4,7 +4,7 @@ class SongsController < ApplicationController
     render json: songs
   end
   def create 
-    create_song = Song.create(song_params)
+    create_song = current_user.songs.create(song_params)
     if create_song.valid? 
         render json: create_song
     else 
@@ -18,7 +18,7 @@ class SongsController < ApplicationController
   private
   
   def song_params
-    params.require(:song).permit(:title, :artist, :user_id)
+    params.require(:song).permit(:title, :artist)
   end
 
 end
