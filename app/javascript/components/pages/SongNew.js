@@ -32,7 +32,7 @@ class SongNew extends Component {
         <FormGroup>
           <Label for="title">Song title</Label>
           <Input
-            title="title"
+            name="title"
             placeholder="Whats your title"
             type="text"
             onChange={this.handleChange}
@@ -42,7 +42,7 @@ class SongNew extends Component {
         <FormGroup>
           <Label for="artist">artist</Label>
           <Input
-            artist="artist"
+            name="artist"
             placeholder="artist"
             type="text"
             onChange={this.handleChange}

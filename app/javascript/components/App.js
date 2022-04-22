@@ -13,6 +13,36 @@ import SongShow from './pages/SongShow'
 import About from './pages/About'
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      songs: []
+    }
+  }
+  componentDidMount(){
+    this.readSong()
+  }
+
+  createSong = (newSong) => {
+    fetch("http://localhost:3000/songs", {
+      body: JSON.stringify(newSong),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => this.readSong())
+    .catch(errors => console.log("Song create errors:", errors))
+  }
+
+  readSong = () => {
+    fetch("http://localhost:3000/songs")
+    .then(response => response.json())
+    .then(payload => this.setState({songs: payload}))
+    .catch(errors => console.log("Song read errors:", errors))
+  }
+
   render() {
     return (
 
@@ -22,7 +52,10 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/songindex" component={SongIndex} />
           <Route path="/songshow" component={SongShow} />
-          <Route path="/songnew" component={SongNew} />
+          <Route
+            path="/SongNew"
+            render={(props) => <SongNew createSong={this.createSong} />}
+          />
           <Route path="/songedit" component={SongEdit} />
           <Route path="/about" component={About} />
         </Switch>
