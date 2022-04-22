@@ -68,7 +68,8 @@ class Header extends Component {
                     <a href={new_user_route} className="nav-link">Sign Up</a>
                   </NavItem>
                 }
-                <UncontrolledDropdown
+                {logged_in &&
+                  <UncontrolledDropdown
                   inNavbar
                   nav
                 >
@@ -80,7 +81,9 @@ class Header extends Component {
                   </DropdownToggle>
                   <DropdownMenu end>
                     <DropdownItem>
-                      Option 1
+                    <NavItem>
+                    <a href='/SongNew' className="nav-link">Create</a>
+                  </NavItem>
                     </DropdownItem>
                     <DropdownItem>
                       Option 2
@@ -90,7 +93,7 @@ class Header extends Component {
                       Reset
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown>
+                </UncontrolledDropdown>}
               </Nav>
               <NavbarText>
                 Simple Text
