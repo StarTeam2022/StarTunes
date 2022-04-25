@@ -24,7 +24,6 @@ class SongNew extends Component {
     this.setState({ submitted: true });
   };
   render() {
-    console.log(this.state.form);
     return(
     <div className="newpage">
       <Form className="form">

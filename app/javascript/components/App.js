@@ -45,12 +45,14 @@ class App extends React.Component {
 
   render() {
     return (
-
       <Router>
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/songindex" component={SongIndex} />
+          <Route
+            path="/songindex"
+            render={(props) => <SongIndex songs={this.state.songs} />}
+          />
           <Route path="/songshow" component={SongShow} />
           <Route
             path="/SongNew"
@@ -60,7 +62,6 @@ class App extends React.Component {
           <Route path="/about" component={About} />
         </Switch>
       </Router>
-
     );
   }
 }
