@@ -24,36 +24,35 @@ class SongNew extends Component {
     this.setState({ submitted: true });
   };
   render() {
-    console.log(this.state.form);
-    return(
-    <div className="newpage">
-      <Form className="form">
-        <h2>create</h2>
-        <FormGroup>
-          <Label for="title">Song title</Label>
-          <Input
-            name="title"
-            placeholder="Whats your title"
-            type="text"
-            onChange={this.handleChange}
-            value={this.state.form.title}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="artist">artist</Label>
-          <Input
-            name="artist"
-            placeholder="artist"
-            type="text"
-            onChange={this.handleChange}
-            value={this.state.form.artist}
-          />
-        </FormGroup>
-        <Button onClick={this.handleSubmit} name="submit">
-          Add an song
-        </Button>
-        {this.state.submitted && <Redirect to="/songindex" />}
-      </Form>
+    return (
+      <div className="newpage">
+        <Form className="form">
+          <h2>Create</h2>
+          <FormGroup>
+            <Label for="title">Song Title</Label>
+            <Input
+              name="title"
+              placeholder="Whats your title"
+              type="text"
+              onChange={this.handleChange}
+              value={this.state.form.title}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="artist">Artist</Label>
+            <Input
+              name="artist"
+              placeholder="artist"
+              type="text"
+              onChange={this.handleChange}
+              value={this.state.form.artist}
+            />
+          </FormGroup>
+          <Button onClick={this.handleSubmit} name="submit">
+            Add a Song
+          </Button>
+          {this.state.submitted && <Redirect to="/songindex" />}
+        </Form>
       </div>
     )
   }
