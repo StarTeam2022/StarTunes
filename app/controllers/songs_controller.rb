@@ -14,7 +14,9 @@ class SongsController < ApplicationController
     end
   end 
 
-  def updated 
+  def update
+    song = current_user.songs.update(song_params)
+    render json: song
   end
 
   private
