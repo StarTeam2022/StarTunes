@@ -13,47 +13,47 @@ import SongShow from './pages/SongShow'
 import About from './pages/About'
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       songs: []
     }
   }
-  componentDidMount(){
+  componentDidMount() {
     this.readSong()
   }
 
   createSong = (newSong) => {
-    fetch("http://localhost:3000/songs", {
+    fetch("/songs", {
       body: JSON.stringify(newSong),
       headers: {
         "Content-Type": "application/json"
       },
       method: "POST"
     })
-    .then(response => response.json())
-    .then(payload => this.readSong())
-    .catch(errors => console.log("Song create errors:", errors))
+      .then(response => response.json())
+      .then(payload => this.readSong())
+      .catch(errors => console.log("Song create errors:", errors))
   }
 
   readSong = () => {
-    fetch("http://localhost:3000/songs")
-    .then(response => response.json())
-    .then(payload => this.setState({songs: payload}))
-    .catch(errors => console.log("Song read errors:", errors))
+    fetch("/songs")
+      .then(response => response.json())
+      .then(payload => this.setState({ songs: payload }))
+      .catch(errors => console.log("Song read errors:", errors))
   }
 
   updateSong = (updatedSong, id) => {
     fetch("http://localhost:3000/songs/${id}", {
-      body: JSON.stringify(updatedSong), 
+      body: JSON.stringify(updatedSong),
       headers: {
         "Content-Type": "application/json"
-      }, 
+      },
       method: "PATCH",
     })
-    .then(response => response.json())
-    .then(payload => this.readSong())
-    .catch(errors => console.log(errors))
+      .then(response => response.json())
+      .then(payload => this.readSong())
+      .catch(errors => console.log(errors))
   }
 
   render() {
@@ -71,14 +71,14 @@ class App extends React.Component {
             path="/SongNew"
             render={(props) => <SongNew createSong={this.createSong} />}
           />
-           <Route
-              path="/songedit/:id"
-              render={(props) => {
-                const id = props.match.params.id
-                const song = this.state.songs.find(songObj => songObj.id === +id)
-                return <SongEdit song={song} updateSong={this.updateSong} />
-              }}
-            />
+          <Route
+            path="/songedit/:id"
+            render={(props) => {
+              const id = props.match.params.id
+              const song = this.state.songs.find(songObj => songObj.id === +id)
+              return <SongEdit song={song} updateSong={this.updateSong} />
+            }}
+          />
           <Route path="/about" component={About} />
         </Switch>
       </Router>
