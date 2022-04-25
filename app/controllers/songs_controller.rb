@@ -14,7 +14,7 @@ class SongsController < ApplicationController
     end
   end 
 
-  def new
+  def updated 
   end
 
   private

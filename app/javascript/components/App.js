@@ -43,6 +43,19 @@ class App extends React.Component {
     .catch(errors => console.log("Song read errors:", errors))
   }
 
+  updateSong = (updatedSong, id) => {
+    fetch("http://localhost:3000/songs/${id}", {
+      body: JSON.stringify(updatedSong), 
+      headers: {
+        "Content-Type": "application/json"
+      }, 
+      method: "PATCH",
+    })
+    .then(response => response.json())
+    .then(payload => this.readSong())
+    .catch(errors => console.log(errors))
+  }
+
   render() {
     return (
       <Router>
@@ -58,7 +71,14 @@ class App extends React.Component {
             path="/SongNew"
             render={(props) => <SongNew createSong={this.createSong} />}
           />
-          <Route path="/songedit" component={SongEdit} />
+           <Route
+              path="/songedit/:id"
+              render={(props) => {
+                const id = props.match.params.id
+                const song = this.state.songs.find(songObj => songObj.id === +id)
+                return <SongEdit song={song} updateSong={this.updateSong} />
+              }}
+            />
           <Route path="/about" component={About} />
         </Switch>
       </Router>

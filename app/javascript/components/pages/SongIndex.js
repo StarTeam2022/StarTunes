@@ -17,6 +17,16 @@ class SongIndex extends Component {
                         <div>{song.title}</div>
                         <div>{song.artist}</div>
                       </CardTitle>
+                      <div className="action">
+                        <NavLink to={`/songedit/${song.id}`}>
+                          <Button color="primary">  
+                            Edit
+                          </Button>
+                        </NavLink>
+                        <Button color="danger">  
+                          Delete
+                        </Button>
+                      </div>
                     </Card>
                   </Col>
                 </Row>
