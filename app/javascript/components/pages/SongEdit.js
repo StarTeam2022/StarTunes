@@ -20,7 +20,7 @@ class SongNew extends Component {
   };
 
   handleSubmit = () => {
-    this.props.createSong(this.state.form);
+    this.props.updateSong(this.state.form);
     this.setState({ submitted: true });
   };
   render() {
