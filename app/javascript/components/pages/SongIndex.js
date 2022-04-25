@@ -19,11 +19,11 @@ class SongIndex extends Component {
                       </CardTitle>
                       <div className="action">
                         <NavLink to={`/songedit/${song.id}`}>
-                          <Button color="primary">  
+                          <Button color="primary">
                             Edit
                           </Button>
                         </NavLink>
-                        <Button color="danger">  
+                        <Button color="danger">
                           Delete
                         </Button>
                       </div>
