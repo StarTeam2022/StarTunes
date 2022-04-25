@@ -1,8 +1,10 @@
 class SongsController < ApplicationController
- def index
-    songs = Song.all
-    render json: songs
+
+  def index
+    songs = current_user.songs.order(created_at: :desc)
+    render json: songs.as_json(include: [:user])
   end
+  
   def create 
     create_song = current_user.songs.create(song_params)
     if create_song.valid? 
