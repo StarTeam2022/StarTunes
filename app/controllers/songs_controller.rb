@@ -19,7 +19,7 @@ class SongsController < ApplicationController
     render json: song
   end
 
-  def delete
+  def destroy
     song = current_user.songs.find(params[:id])
     if song.destroy
       render json: song

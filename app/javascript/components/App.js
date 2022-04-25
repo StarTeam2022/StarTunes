@@ -57,7 +57,7 @@ class App extends React.Component {
   }
 
   deleteSong = (id) => {
-    fetch(`http://localhost:3000/songs/${id}`, {
+    fetch(`/songs/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },

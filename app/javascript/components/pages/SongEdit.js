@@ -63,6 +63,7 @@ class SongNew extends Component {
           <Button color="danger" onClick={this.handleDelete}>
             Delete
           </Button>
+          {this.state.deleted && <Redirect to="/songindex" />}
         </Form>
       </div>
     )
