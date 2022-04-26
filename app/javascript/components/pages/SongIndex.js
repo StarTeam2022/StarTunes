@@ -18,6 +18,7 @@ class SongIndex extends Component {
   render() {
     return (
       <div>
+          <h1 className="index-name">My Songs</h1>
         <div className="index-name">
           {this.props.songs &&
             this.props.songs.map((song) => {
