@@ -7,8 +7,8 @@ class SongNew extends Component {
     super(props);
     this.state = {
       form: {
-        title: this.props.song.title ||"",
-        artist: this.props.song.artist ||"",
+        title: this.props.song.title || "",
+        artist: this.props.song.artist || "",
       },
       submitted: false,
       deleted: false,
