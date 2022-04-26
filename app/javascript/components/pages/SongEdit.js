@@ -11,8 +11,10 @@ class SongNew extends Component {
         artist: "",
       },
       submitted: false,
+      deleted: false,
     };
   }
+
   handleChange = (e) => {
     let { form } = this.state;
     form[e.target.name] = e.target.value;
@@ -23,11 +25,17 @@ class SongNew extends Component {
     this.props.updateSong(this.state.form);
     this.setState({ submitted: true });
   };
+
+  handleDelete = () => {
+    this.props.deleteSong(this.props.song.id)
+    this.setState({ deleted: true })
+  }
+
   render() {
     return (
       <div className="newpage">
         <Form className="form">
-          <h2>Update</h2>
+          <h2>Update or Delete Song Information</h2>
           <FormGroup>
             <Label for="title">Song title</Label>
             <Input
@@ -52,6 +60,10 @@ class SongNew extends Component {
             Update
           </Button>
           {this.state.submitted && <Redirect to="/songindex" />}
+          <Button color="danger" onClick={this.handleDelete}>
+            Delete
+          </Button>
+          {this.state.deleted && <Redirect to="/songindex" />}
         </Form>
       </div>
     )

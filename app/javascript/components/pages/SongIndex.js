@@ -3,6 +3,18 @@ import { NavLink } from "react-router-dom";
 import { Card, Button, CardTitle, Row, Col } from "reactstrap";
 
 class SongIndex extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      deleted: false
+    }
+  }
+
+  handleDelete = () => {
+    this.props.deleteSong(this.props.song.id)
+    this.setState({ deleted: true })
+  }
+
   render() {
     return (
       <div>
@@ -20,12 +32,9 @@ class SongIndex extends Component {
                       <div className="action">
                         <NavLink to={`/songedit/${song.id}`}>
                           <Button color="primary">
-                            Edit
+                            Edit/Delete
                           </Button>
                         </NavLink>
-                        <Button color="danger">
-                          Delete
-                        </Button>
                       </div>
                     </Card>
                   </Col>

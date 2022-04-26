@@ -56,6 +56,18 @@ class App extends React.Component {
       .catch(errors => console.log(errors))
   }
 
+  deleteSong = (id) => {
+    fetch(`/songs/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .then(payload => this.readSong())
+      .catch(errors => console.log(errors))
+  }
+
   render() {
     return (
       <Router>
@@ -76,7 +88,11 @@ class App extends React.Component {
             render={(props) => {
               const id = props.match.params.id
               const song = this.state.songs.find(songObj => songObj.id === +id)
-              return <SongEdit song={song} updateSong={this.updateSong} />
+              return <SongEdit
+                song={song}
+                updateSong={this.updateSong}
+                deleteSong={this.deleteSong}
+              />
             }}
           />
           <Route path="/about" component={About} />
