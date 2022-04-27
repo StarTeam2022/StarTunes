@@ -1,3 +1,9 @@
-.index-name{
+.index-name {
   margin-top: 60px;
+}
+
+.randomButton {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
 }

@@ -13,6 +13,7 @@ import SongShow from './pages/SongShow'
 import About from './pages/About'
 import './App.css'
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -45,7 +46,7 @@ class App extends React.Component {
   }
 
   updateSong = (updatedSong, id) => {
-    fetch("http://localhost:3000/songs/${id}", {
+    fetch(`/songs/${id}`, {
       body: JSON.stringify(updatedSong),
       headers: {
         "Content-Type": "application/json"
