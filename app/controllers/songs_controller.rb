@@ -6,7 +6,6 @@ class SongsController < ApplicationController
   end
   
   def create 
-    binding.pry
     create_song = current_user.songs.create(song_params)
     if create_song.valid? 
         render json: create_song
@@ -32,7 +31,7 @@ class SongsController < ApplicationController
   private
   
   def song_params
-    params.require(:song).permit(:title, :artist, :image_url)
+    params.require(:song).permit(:title, :artist, :image)
   end
 
 end

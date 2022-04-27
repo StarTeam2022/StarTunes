@@ -91,7 +91,7 @@ const randomSongs = [
   },
   {
     id: 19,
-    title: "Chop Suey!",
+    title: "Chop Suey",
     artist: "System of a down"
   },
   {

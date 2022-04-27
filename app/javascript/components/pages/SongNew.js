@@ -9,7 +9,7 @@ class SongNew extends Component {
       form: {
         title: "",
         artist: "",
-        imageUrl: "",
+        image: "",
       },
       submitted: false,
     };
@@ -52,11 +52,11 @@ class SongNew extends Component {
           <FormGroup>
             <Label for="image-url">Image URL</Label>
             <Input
-              name="imageUrl"
+              name="image"
               placeholder="image-url"
               type="text"
               onChange={this.handleChange}
-              value={this.state.form.imageUrl}
+              value={this.state.form.image}
             />
           </FormGroup>
           <Button onClick={this.handleSubmit} name="submit">

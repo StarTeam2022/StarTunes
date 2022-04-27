@@ -26,7 +26,7 @@ class SongIndex extends Component {
                 <Row key={song.id}>
                   <Col sm="6">
                     <Card body>
-                      <img src={song.imageUrl} alt="cover art for song" />
+                      <img src={song.image} alt="cover art for song" />
                       <CardTitle tag="h5">
                         <div>{song.title}</div>
                         <div>{song.artist}</div>
