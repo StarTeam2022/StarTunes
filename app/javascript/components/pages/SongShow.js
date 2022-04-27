@@ -1,28 +1,32 @@
 import React, { Component } from 'react'
 import randomSongs from '../MockSongs'
-import { ImShuffle } from 'react-icons/im'
+
 
 export class SongShow extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      songs: randomSongs
+      songs: randomSongs,
+      randomSong: ""
     }
   }
-  
+
+
   handleChange = () => {
-    const randSongs = randomSongs(Math.floor(Math.random() * randomSongs.length))
+    let randSongs = this.state.songs[(Math.floor(Math.random() * this.state.songs.length))]
+    this.setState({ randomSong: randSongs })
   }
 
   render() {
     return (
       <>
-      <div className="index-name">
-        <ImShuffle />
-        <p>{this.state.songs.map(item => 
-          item.title)}</p>
-          <p>{this.handleChange}</p>
-      </div>
+        <div className="randomButton">
+          <button onClick={this.handleChange}>Click for a Song!</button>
+        </div>
+        <div className="index-name">
+          <p>{this.state.randomSong.title}</p>
+          <p>{this.state.randomSong.artist}</p>
+        </div>
       </>
     )
   }

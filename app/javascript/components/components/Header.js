@@ -85,14 +85,13 @@ class Header extends Component {
                     <DropdownMenu end>
                       <DropdownItem>
                         <NavItem>
-                          <NavLink href="/SongNew">Create</NavLink>
+                          <NavLink href="/SongNew" style={{ color: 'black' }}>Create</NavLink>
                         </NavItem>
                       </DropdownItem>
                       <DropdownItem>
-                        <NavLink href="/SongIndex">My Songs</NavLink>
+                        <NavLink href="/SongIndex" style={{ color: 'black' }}>My Songs</NavLink>
                       </DropdownItem>
                       <DropdownItem divider />
-                      <DropdownItem>Reset</DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 )}
