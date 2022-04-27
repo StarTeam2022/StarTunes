@@ -6,6 +6,7 @@ class SongsController < ApplicationController
   end
   
   def create 
+    binding.pry
     create_song = current_user.songs.create(song_params)
     if create_song.valid? 
         render json: create_song
