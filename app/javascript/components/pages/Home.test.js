@@ -21,7 +21,7 @@ describe("When Home Renders", () => {
       "TIRED OF THE SAME OLD SONGS, LET'S VIBE OUT!"
     );
   })
-  
+
   it("checks all image's props", () => {
     const img = home.find("img")
     expect(img.prop("src")).toEqual(playButton)

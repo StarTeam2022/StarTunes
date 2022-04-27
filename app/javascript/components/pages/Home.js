@@ -6,8 +6,9 @@ export class Home extends Component {
     return (
       <div>
         <h1 id="home-header" className="index-name">
-          TIRED OF THE SAME OLD SONGS, LET'S VIBE OUT!</h1>
-        <img id="play-image" src={playButton} alt="playButton"/>
+          TIRED OF THE SAME OLD SONGS, LET'S VIBE OUT!
+        </h1>
+        <img id="play-image" src={playButton} alt="playButton" />
       </div>
     );
   }
