@@ -1,4 +1,4 @@
-let randomSongs = [
+const randomSongs = [
   {
     id: 1,
     title: "Under the bridge",
