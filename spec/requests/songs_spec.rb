@@ -31,8 +31,7 @@ RSpec.describe "Songs", type: :request do
         song_response = JSON.parse(response.body)
         p song_response
         expect(song_response["title"]).to eq "i miss the old Kayne" #didnt use the index [0] since it wasnt returning an array
-      end
-    end
+      endar
     describe "POST /create" do
       it "create a song" do
         # creating a user 
