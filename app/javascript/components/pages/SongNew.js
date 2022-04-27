@@ -9,6 +9,7 @@ class SongNew extends Component {
       form: {
         title: "",
         artist: "",
+        image: "",
       },
       submitted: false,
     };
@@ -46,6 +47,16 @@ class SongNew extends Component {
               type="text"
               onChange={this.handleChange}
               value={this.state.form.artist}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="image-url">Image URL</Label>
+            <Input
+              name="image"
+              placeholder="image-url"
+              type="text"
+              onChange={this.handleChange}
+              value={this.state.form.image}
             />
           </FormGroup>
           <Button onClick={this.handleSubmit} name="submit">

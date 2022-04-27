@@ -18,7 +18,7 @@ class SongIndex extends Component {
   render() {
     return (
       <div>
-          <h1 className="index-name">My Songs</h1>
+        <h1 className="index-name">My Songs</h1>
         <div className="index-name">
           {this.props.songs &&
             this.props.songs.map((song) => {
@@ -26,6 +26,7 @@ class SongIndex extends Component {
                 <Row key={song.id}>
                   <Col sm="6">
                     <Card body>
+                      <img src={song.image} alt="cover art for song" />
                       <CardTitle tag="h5">
                         <div>{song.title}</div>
                         <div>{song.artist}</div>
