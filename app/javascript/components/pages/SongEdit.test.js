@@ -26,8 +26,16 @@ describe("When SongEdit renders", () => {
     expect(songForm.length).toEqual(1);
   });
 
-  xit("displays song title", () => {
-    const titleInput = edit.find("input").get(0)
-    expect(titleInput).toEqual("");
+  it("displays song title", () => {
+    const inputTitle = edit.find('[type="text"]').get(0).props.value
+    expect(inputTitle).toEqual('test title')
+  })
+  it("displays song artist", () => {
+    const inputArtist = edit.find('[type="text"]').get(1).props.value
+    expect(inputArtist).toEqual('test artist')
+  })
+  it("displays song artist", () => {
+    const inputImage = edit.find('[type="text"]').get(2).props.value
+    expect(inputImage).toEqual('test image')
   })
 });

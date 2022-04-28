@@ -7,14 +7,19 @@ class SongNew extends Component {
     super(props);
     this.state = {
       form: {
-        title: this.props.song.title || "",
-        artist: this.props.song.artist || "",
-        image: this.props.song.image || "",
+        title: "",
+        artist: "",
+        image: "",
       },
       submitted: false,
       deleted: false,
     };
   }
+
+  componentDidMount() {
+    const { id, ...rest } = this.props.song
+    this.setState({ form: rest})
+    }
 
   handleChange = (e) => {
     let { form } = this.state;
@@ -23,7 +28,7 @@ class SongNew extends Component {
   };
 
   handleSubmit = () => {
-    this.props.updateSong(this.state.form);
+    this.props.updateSong(this.state.form, this.props.song.id);
     this.setState({ submitted: true });
   };
 
