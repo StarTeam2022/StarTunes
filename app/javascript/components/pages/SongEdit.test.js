@@ -12,7 +12,7 @@ describe("When SongEdit renders", () => {
   let song = {
     title: "test title",
     artist: "test artist",
-    image: "test image",
+    image: "test image"
   }
   const edit = shallow(<SongEdit song={song} />);
 
@@ -34,7 +34,7 @@ describe("When SongEdit renders", () => {
     const inputArtist = edit.find('[type="text"]').get(1).props.value
     expect(inputArtist).toEqual('test artist')
   })
-  it("displays song artist", () => {
+  it("displays song image", () => {
     const inputImage = edit.find('[type="text"]').get(2).props.value
     expect(inputImage).toEqual('test image')
   })
