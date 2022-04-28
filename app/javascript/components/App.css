@@ -1,9 +1,17 @@
 .index-name {
   margin-top: 60px;
+  text-align: center;
 }
 
 .randomButton {
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo-pic {
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
 }
