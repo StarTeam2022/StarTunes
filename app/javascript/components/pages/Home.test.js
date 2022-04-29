@@ -10,6 +10,8 @@ import Home from './Home.js'
 
 Enzyme.configure({ adapter: new Adapter() })
 
+jest.mock('../assets/playButton.png')
+
 describe("When Home Renders", () => {
   let home
   beforeEach(() => {
