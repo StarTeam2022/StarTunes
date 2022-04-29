@@ -21,5 +21,11 @@
   "devDependencies": {
     "react-test-renderer": "^18.1.0",
     "webpack-dev-server": "^3"
-   }
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/config/webpack/test.js"
+    ]
+  }
 }
