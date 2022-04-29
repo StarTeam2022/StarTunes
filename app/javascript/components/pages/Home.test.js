@@ -14,9 +14,11 @@ jest.mock('../assets/playButton.png')
 
 describe("When Home Renders", () => {
   let home
+
   beforeEach(() => {
     home = shallow(<Home />)
   })
+
   it("displays a heading", () => {
     const heading = home.find('h1')
     expect(heading.text()).toEqual(
@@ -25,10 +27,9 @@ describe("When Home Renders", () => {
   })
 
   it("checks all image's props", () => {
-    render(<playButton/>)
     const img = home.find("img")
     expect(img.prop("src")).toEqual(playButton)
     expect(img.prop("alt")).toEqual("playButton")
-    expect(img.prop("id")).toEqual("play-image");
+    expect(img.prop("id")).toEqual("play-image")
   })
 })
