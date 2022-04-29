@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16'
 
 import Home from './Home.js'
 
-// import playButton from '../assets/playButton.png'
+import playButton from '../assets/playButton.png'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -25,9 +25,10 @@ describe("When Home Renders", () => {
   })
 
   it("checks all image's props", () => {
+    render(<playButton/>)
     const img = home.find("img")
     expect(img.prop("src")).toEqual(playButton)
     expect(img.prop("alt")).toEqual("playButton")
-    expect(img.prop("id:")).toEqual("play-image");
+    expect(img.prop("id")).toEqual("play-image");
   })
 })
