@@ -61,5 +61,13 @@ RSpec.describe "Songs", type: :request do
       expect(song_response["title"]).to eq "Ultralight Beam" 
     end
   end
+
+  describe "DESTROY /delete" do
+    it "destroys a song" do
+      delete "/songs/#{song.id}"
+      song_response = JSON.parse(response.body)
+      expect(songs).to be_empty 
+    end
+  end
 end
   

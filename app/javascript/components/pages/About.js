@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ryan from '../assets/ryan'
-import tiffany from '../assets/tiffany'
-import stevie from '../assets/stevie'
-import arnold from '../assets/arnold'
+import ryan from '../assets/ryan.jpg'
+import tiffany from '../assets/tiffany.jpg'
+import stevie from '../assets/stevie.jpg'
+import arnold from '../assets/arnold.jpg'
 import {
   Card,
   CardBody,
