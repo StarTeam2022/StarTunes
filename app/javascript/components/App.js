@@ -12,6 +12,7 @@ import SongIndex from './pages/SongIndex'
 import SongShow from './pages/SongShow'
 import About from './pages/About'
 import './App.css'
+import NotFound from './pages/NotFound'
 
 
 class App extends React.Component {
@@ -88,16 +89,21 @@ class App extends React.Component {
           <Route
             path="/songedit/:id"
             render={(props) => {
-              const id = props.match.params.id
-              const song = this.state.songs.find(songObj => songObj.id === +id)
-              return <SongEdit
-                song={song}
-                updateSong={this.updateSong}
-                deleteSong={this.deleteSong}
-              />
+              const id = props.match.params.id;
+              const song = this.state.songs.find(
+                (songObj) => songObj.id === +id
+              );
+              return (
+                <SongEdit
+                  song={song}
+                  updateSong={this.updateSong}
+                  deleteSong={this.deleteSong}
+                />
+              );
             }}
           />
           <Route path="/about" component={About} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     );
