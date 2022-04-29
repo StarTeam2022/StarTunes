@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ryan from '../assests/ryan'
-import tiffany from '../assests/tiffany'
-import stevie from '../assests/stevie'
-import arnold from '../assests/arnold'
+import ryan from '../assets/ryan'
+import tiffany from '../assets/tiffany'
+import stevie from '../assets/stevie'
+import arnold from '../assets/arnold'
 import {
   Card,
   CardBody,
@@ -44,14 +44,14 @@ export class About extends Component {
               </CardText>
               <a href='https://github.com/RyanJ2463' target="_blank">
                 <img
-                  id="logo-pic"
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                   onClick="location.href = 'www.github.com/';"
                 />
               </a>
               <a href='https://www.linkedin.com/in/ryan-jacobell-63b7ba1b9/' target="_blank">
                 <img
-                  id='logo-pic'
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
@@ -79,13 +79,13 @@ export class About extends Component {
               </CardText>
               <a href='http://www.github.com/tiffanydoh' target="_blank">
                 <img
-                  id="logo-pic"
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                 />
               </a>
               <a href='https://www.linkedin.com/in/tiffanydoh/' target="_blank">
                 <img
-                  id='logo-pic'
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
@@ -113,13 +113,13 @@ export class About extends Component {
               </CardText>
               <a href='https://github.com/developing-stevie' target="_blank">
                 <img
-                  id="logo-pic"
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                 />
               </a>
               <a href='https://www.linkedin.com/in/stevie-mitchell-8a6900235/' target="_blank">
                 <img
-                  id='logo-pic'
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
@@ -147,13 +147,13 @@ export class About extends Component {
               </CardText>
               <a href='https://github.com/arnoldlaoang' target="_blank">
                 <img
-                  id="logo-pic"
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                 />
               </a>
               <a href='https://www.linkedin.com/in/arnold-l-a4b3a4a8/' target="_blank">
                 <img
-                  id='logo-pic'
+                  className="logo-pic"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>

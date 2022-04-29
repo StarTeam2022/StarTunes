@@ -1,54 +1,65 @@
 require 'rails_helper'
 
 RSpec.describe "Songs", type: :request do
+  let(:user) do
+    User.create(
+      email: 'yolo@aol.com', 
+      password: 'coolguy55', 
+      password_confirmation: 'coolguy55'
+    )
+  end
+
+  let!(:song) do
+    Song.create(
+      title: "i miss the old Kanye",
+      artist: "Kanye",
+      image: "test image",
+      user_id: user.id
+    ) 
+  end
+
+  before do 
+    sign_in user
+  end
+
   describe "GET /index" do
     it "get a list of all the songs" do
-      user = User.create(email: 'yolo@aol.com', password: 'coolguy55', password_confirmation: 'coolguy55')
-      song = user.songs.create!(
-      title: "i miss the old Kayne",
-      artist: "Kayne"
-    )  
-    get '/songs' 
-    song_response = JSON.parse(response.body)
-    p song_response
-    expect(song_response[0]["title"]).to eq "i miss the old Kayne"
+      get '/songs' 
+      song_response = JSON.parse(response.body)
+      expect(song_response[0]["title"]).to eq "i miss the old Kanye"
     end
   end
 
-    describe "POST /create" do
-      it "create a song" do
-        # creating a user 
-        user = User.create(email: 'yolo@aol.com', password: 'coolguy55', password_confirmation: 'coolguy55')
-        # checking if a user is signed in 
-        sign_in user 
-        # creating a song with a signed in user
-        song_params = {
-          song: {
-          title: "i miss the old Kayne",
-          artist: "Kayne"}
+  describe "POST /create" do
+    it "create a song" do
+      song_params = {
+        song: {
+          title: "create title",
+          artist: "create artist",
+          image: "create image",
+          user_id: user.id
         }
-        post '/songs', params: song_params
-        song_response = JSON.parse(response.body)
-        p song_response
-        expect(song_response["title"]).to eq "i miss the old Kayne" #didnt use the index [0] since it wasnt returning an array
-      end
+      }
+      post '/songs', params: song_params
+      song_response = JSON.parse(response.body)
+      expect(song_response["title"]).to eq "create title" 
     end
-    describe "POST /create" do
-      it "create a song" do
-        # creating a user 
-        user = User.create(email: 'yolo@aol.com', password: 'coolguy55', password_confirmation: 'coolguy55')
-        # checking if a user is signed in 
-        sign_in user 
-        # creating a song with a signed in user
-        song_params = {
-          song: {
-          title: "i miss the old Kayne",
-          artist: "Kayne"}
+  end
+
+  describe "PATCH /update" do
+    it "create a song" do
+      song_params = {
+        song: {
+          title: "Ultralight Beam",
+          artist: "Kanye",
+          image: "test image"
         }
-        
-        post '/songs', params: song_params
-        song_response = JSON.parse(response.body)
-        p song_response
-        expect(song_response["title"]).to eq "i miss the old Kayne" #didnt use the index [0] since it wasnt returning an array
+      }
+      
+      patch "/songs/#{song.id}", params: song_params
+      song_response = JSON.parse(response.body)
+      expect(song_response["title"]).to eq "Ultralight Beam" 
+    end
+  end
 end
   
