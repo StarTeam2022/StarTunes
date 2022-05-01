@@ -1,5 +1,5 @@
 .index-name {
-  margin-top: 60px;
+  margin-top: 55px;
   text-align: center;
 }
 
@@ -7,6 +7,26 @@
   margin-top: 60px;
   display: flex;
   justify-content: center;
+}
+
+.songCardShow {
+  margin-top: 150px;
+  filter: drop-shadow(3px 6px 4px black)
+}
+
+.songRandom {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+.songShow {
+  background-color: #BE8C63;
+  height: 100vh;
+}
+
+.cardImg {
+  height: 200px;
 }
 
 #home-header {
@@ -18,7 +38,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  margin-top: 30px;
+  width: 30%;
+  height: 500px;
 }
 
 .logo-pic {
@@ -27,3 +49,79 @@
   display: flex;
   justify-content: center;
 }
+
+.text-title {
+  margin-top: 60px;
+}
+
+.playlist {
+ padding-bottom: 30px;
+ 
+}
+
+.playlist-background {
+  background-color: #BE8C63;
+  height: 100vh;
+}
+
+.playlist-card {
+  width: 300px;
+}
+
+.playlist-title {
+  margin-top: 55px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+.about-us {
+  padding-top: 60px;
+  padding: 50px;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.page-about {
+  background-color: #BE8C63;
+  height: 120vh;
+}
+
+.about-title {
+  margin-top: 55px;
+  text-align: center;
+  font-size: 60px;
+}
+
+
+.home-page {
+  background-color: #BE8C63;
+  height: 150vh;
+}
+
+.form-page {
+  height: 100vh;
+  background-color: #BE8C63;
+}
+
+.form {
+  width: 50%;
+  margin: auto;
+}
+
+.form-title {
+  margin-top: 55px;
+}
+
+

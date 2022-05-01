@@ -18,16 +18,16 @@ import {
 export class About extends Component {
   render() {
     return (
-      <>
-        <h1 className="index-name">About Us!</h1>
-        <CardGroup>
+      <div className='page-about'>
+        <h1 className="about-title">About Us!</h1>
+        <CardGroup className="about-us">
           <Card>
             <CardImg
               alt="ryan"
               src={ryan}
               top
-              width="220px"
-              height="294px"
+              width="100%"
+              height='400px'
             />
             <CardBody>
               <CardTitle tag="h5">
@@ -42,6 +42,7 @@ export class About extends Component {
               <CardText>
                 sddfsdf
               </CardText>
+              <div className='socials'>
               <a href='https://github.com/RyanJ2463' target="_blank">
                 <img
                   className="logo-pic"
@@ -55,6 +56,7 @@ export class About extends Component {
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
+              </div>
             </CardBody>
           </Card>
           <Card>
@@ -63,6 +65,7 @@ export class About extends Component {
               src={tiffany}
               top
               width="100%"
+              height='400px'
             />
             <CardBody>
               <CardTitle tag="h5">
@@ -77,6 +80,7 @@ export class About extends Component {
               <CardText>
                 sdasdadasd
               </CardText>
+              <div className='socials'>
               <a href='http://www.github.com/tiffanydoh' target="_blank">
                 <img
                   className="logo-pic"
@@ -89,6 +93,7 @@ export class About extends Component {
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
+              </div>
             </CardBody>
           </Card>
           <Card>
@@ -97,6 +102,7 @@ export class About extends Component {
               src={stevie}
               top
               width="100%"
+              height='400px'
             />
             <CardBody>
               <CardTitle tag="h5">
@@ -111,6 +117,7 @@ export class About extends Component {
               <CardText>
                 dfsdfsdffsdf
               </CardText>
+              <div className='socials'>
               <a href='https://github.com/developing-stevie' target="_blank">
                 <img
                   className="logo-pic"
@@ -123,6 +130,7 @@ export class About extends Component {
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
+              </div>
             </CardBody>
           </Card>
           <Card>
@@ -131,6 +139,7 @@ export class About extends Component {
               src={arnold}
               top
               width="100%"
+              height='400px'
             />
             <CardBody>
               <CardTitle tag="h5">
@@ -145,6 +154,7 @@ export class About extends Component {
               <CardText>
                 dfsdfsdffsdf
               </CardText>
+              <div className='socials'>
               <a href='https://github.com/arnoldlaoang' target="_blank">
                 <img
                   className="logo-pic"
@@ -157,10 +167,11 @@ export class About extends Component {
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                 />
               </a>
+              </div>
             </CardBody>
           </Card>
         </CardGroup>
-      </>
+      </div>
     )
   }
 }

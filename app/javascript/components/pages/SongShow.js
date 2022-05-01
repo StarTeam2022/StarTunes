@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 import randomSongs from '../MockSongs'
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 
 export class SongShow extends Component {
@@ -7,7 +13,8 @@ export class SongShow extends Component {
     super(props)
     this.state = {
       songs: randomSongs,
-      randomSong: ""
+      randomSong: "",
+      open: false
     }
   }
 
@@ -15,19 +22,37 @@ export class SongShow extends Component {
   handleChange = () => {
     let randSongs = this.state.songs[(Math.floor(Math.random() * this.state.songs.length))]
     this.setState({ randomSong: randSongs })
+    this.setState({ open: true})
   }
 
   render() {
     return (
-      <>
+      <div className="songShow">
+        <div className="songRandom">
+          {!this.state.open && <h1 className='text-title'>Click the button</h1>}
+        {this.state.open && <Card className='songCardShow'>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="300"
+              width="200"
+              image={this.state.randomSong.image}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+              <p>{this.state.randomSong.title}</p>
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+              <p>{this.state.randomSong.artist}</p>
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>}
+        </div>
         <div className="randomButton">
-          <button onClick={this.handleChange}>Click for a Song!</button>
+          <Button sx={{color: 'black'}} variant="contained" onClick={this.handleChange}>Random</Button>
         </div>
-        <div className="index-name">
-          <p>{this.state.randomSong.title}</p>
-          <p>{this.state.randomSong.artist}</p>
-        </div>
-      </>
+      </div>
     )
   }
 }

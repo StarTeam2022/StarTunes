@@ -4,7 +4,7 @@ import playButton from '../assets/playButton.png'
 export class Home extends Component {
   render() {
     return (
-      <div>
+      <div className='home-page'>
         <h1 id="home-header" className="index-name">
           TIRED OF THE SAME OLD SONGS, LET'S VIBE OUT!
         </h1>
