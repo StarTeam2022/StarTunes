@@ -36,7 +36,7 @@ class Header extends Component {
     } = this.props
 
     return (
-      <div className='header-background'>
+      <div>
         <div>
           <Navbar color="dark" dark expand="md" fixed="top">
             <NavbarBrand href="/">StarTunes</NavbarBrand>
