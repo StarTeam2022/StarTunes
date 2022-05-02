@@ -8,10 +8,12 @@ import {
   Navbar,
   NavLink,
   NavbarBrand,
+  NavbarText,
   NavbarToggler,
   NavItem,
   UncontrolledDropdown
 } from 'reactstrap'
+import logo2 from '../assets/logo2.png'
 
 class Header extends Component {
   constructor(props) {
@@ -34,7 +36,7 @@ class Header extends Component {
     } = this.props
 
     return (
-      <>
+      <div className='header-background'>
         <div>
           <Navbar color="dark" dark expand="md" fixed="top">
             <NavbarBrand href="/">StarTunes</NavbarBrand>
@@ -95,10 +97,13 @@ class Header extends Component {
                   </UncontrolledDropdown>
                 )}
               </Nav>
+              <NavbarText>
+                <img className='img-header' src={logo2} alt="logo" />
+              </NavbarText>
             </Collapse>
           </Navbar>
         </div>
-      </>
+      </div>
     );
   }
 }

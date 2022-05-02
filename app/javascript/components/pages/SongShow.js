@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import startunes from '../assets/startunes.png'
+import spacemix from '../assets/spacemix.jpeg'
 
 
 export class SongShow extends Component {
@@ -33,7 +33,7 @@ export class SongShow extends Component {
           <div className="show-title">
           {!this.state.open && <h1 className='text-title'>Click the button to see a randomized song from our database</h1>}
           <div className="show-img">
-          {!this.state.open && <img className='img-show' src={startunes} alt='img'></img>}
+          {!this.state.open && <img className='img-show' src={spacemix} alt='img'></img>}
           </div>
           </div>
         {this.state.open && <Card className='songCardShow'>
