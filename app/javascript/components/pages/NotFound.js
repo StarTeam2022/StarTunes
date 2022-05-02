@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import space404 from '../assets/space404.jpeg'
 
 export class NotFound extends Component {
   render() {
     return (
-      <div>
-        <h1 className="index-name">404 Not Found</h1>
+      <div className="notFound">
+        <div id="foundPic">
+          <img className='space404' src={space404} alt="404 not found image" />
+        </div>
       </div>
     );
   }

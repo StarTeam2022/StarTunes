@@ -26,9 +26,9 @@ class SongNew extends Component {
   };
   render() {
     return (
-      <div className="index-name">
+      <div className="form-page">
         <Form className="form">
-          <h2>Create</h2>
+          <h2 className="form-title">Create</h2>
           <FormGroup>
             <Label for="title">Song Title</Label>
             <Input

@@ -39,9 +39,9 @@ class SongNew extends Component {
 
   render() {
     return (
-      <div className="newpage">
+      <div className="form-page">
         <Form className="form">
-          <h2>Update or Delete Song Information</h2>
+          <h2 className="form-title">Update or Delete Song Information</h2>
           <FormGroup>
             <Label for="title">Song title</Label>
             <Input
@@ -76,7 +76,7 @@ class SongNew extends Component {
             Update
           </Button>
           {this.state.submitted && <Redirect to="/songindex" />}
-          <Button color="danger" onClick={this.handleDelete}>
+          <Button color="warning" onClick={this.handleDelete}>
             Delete
           </Button>
           {this.state.deleted && <Redirect to="/songindex" />}
