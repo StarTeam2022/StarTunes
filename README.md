@@ -1,4 +1,15 @@
 # README
+in terminal
+$ cd desktop
+$ git clone
+$ cd StarTunes
+$ rails db:setup
+$ bundle 
+$ yarn 
+to start server viewing localhost:3000
+$ rails s
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
