@@ -25,6 +25,12 @@
   height: 100vh;
 }
 
+.img-show {
+  margin-top: 100px;
+  height: 300px;
+  width: 300px;
+}
+
 .cardImg {
   height: 200px;
 }
@@ -50,23 +56,33 @@
   justify-content: center;
 }
 
+.show-title {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.show-img {
+  display: flex;
+  justify-content: center;
+}
+
 .text-title {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .playlist {
  padding-bottom: 30px;
  display: flex;
+ justify-content: center;
 }
 
 .playlist-background {
   background-color: #BE8C63;
-  height: 100vh;
+  height: 200vh;
 }
 
 .playlist-card {
   width: 300px;
-  display: flex;
 }
 
 .playlist-title {
@@ -125,4 +141,13 @@
   margin-top: 55px;
 }
 
+.logo {
+  height: 150px;
+  width: 150px;
+}
+
+.img-about {
+  display: flex;
+  justify-content: center;
+}
 

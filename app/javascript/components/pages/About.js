@@ -3,6 +3,8 @@ import ryan from '../assets/ryan.jpg'
 import tiffany from '../assets/tiffany.jpg'
 import stevie from '../assets/stevie.jpg'
 import arnold from '../assets/arnold.jpg'
+import logo2 from '../assets/logo2.png'
+
 import {
   Card,
   CardBody,
@@ -20,6 +22,9 @@ export class About extends Component {
     return (
       <div className='page-about'>
         <h1 className="about-title">About Us!</h1>
+        <div className='img-about'>
+        <img className='logo' src={logo2} alt='logo'></img>
+        </div>
         <CardGroup className="about-us">
           <Card>
             <CardImg

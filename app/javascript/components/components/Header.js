@@ -8,7 +8,6 @@ import {
   Navbar,
   NavLink,
   NavbarBrand,
-  NavbarText,
   NavbarToggler,
   NavItem,
   UncontrolledDropdown
@@ -96,7 +95,6 @@ class Header extends Component {
                   </UncontrolledDropdown>
                 )}
               </Nav>
-              <NavbarText>Simple Text</NavbarText>
             </Collapse>
           </Navbar>
         </div>
