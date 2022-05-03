@@ -154,7 +154,7 @@ describe 'no invalid params' do
     expect(json['title']).to_not be_empty 
   end
 
-  it 'does not update a song with empty title' do
+  it 'does not update a song with empty image' do
     song_params = {
       song: {
         artist: 'testing artist',
@@ -163,54 +163,68 @@ describe 'no invalid params' do
     }
     patch "/songs/#{song.id}", params: song_params
     json = JSON.parse(response.body)
-    expect(json['title']).to_not be_empty 
+    expect(json['image']).to_not be_empty 
   end
 
-  it 'does not update a song with a title less than 2 characters' do
-    song_params = {
-      song: {
-        artist: 't',
-        title: 'testing title'
-      }
-    }
-    patch "/songs/#{song.id}", params: song_params
-    json = JSON.parse(response.body)
-    expect(json['artist']).to include 'is too short (minimum is 2 characters)'
-  end
-
-  it 'does not update a song with a title less than 2 characters' do
-    song_params = {
-      song: {
-        artist: 'testing artist',
-        title: 't'
-      }
-    }
-    patch "/songs/#{song.id}", params: song_params
-    json = JSON.parse(response.body)
-    expect(json['title']).to include 'is too short (minimum is 2 characters)'
-  end
-
-  it 'does not create a song without invalid validations' do
-    song_params = {
-      song: {
-        title: 't',
-        artist: 'testing artist'
-      }
-    }
-    post '/songs', params: song_params
-    json = JSON.parse(response.body)
-    expect(json['title']).to include 'is too short (minimum is 2 characters)'
-  end
-
-  it 'does not create a song without invalid validations' do
+  it 'does not update a song with an artist less than 2 characters' do
     song_params = {
       song: {
         title: 'testing title',
-        artist: 't'
+        artist: 't',
+        image: 'testing image'
+      }
+    }
+    patch "/songs/#{song.id}", params: song_params
+    json = JSON.parse(response.body)
+    expect(json['artist']).to include 'is too short (minimum is 2 characters)'
+  end
+
+  it 'does not update a song with a title less than 2 characters' do
+    song_params = {
+      song: {
+        title: 't',
+        artist: 'testing artist',
+        image: "testing image"
+      }
+    }
+    patch "/songs/#{song.id}", params: song_params
+    json = JSON.parse(response.body)
+    expect(json['title']).to include 'is too short (minimum is 2 characters)'
+  end
+
+  it 'does not create a song with an title less than 2 characters' do
+    song_params = {
+      song: {
+        title: 't',
+        artist: 'testing artist',
+        image: "testing image"
+      }
+    }
+    post '/songs', params: song_params
+    json = JSON.parse(response.body)
+    expect(json['title']).to include 'is too short (minimum is 2 characters)'
+  end
+
+  it 'does not create a song with an artist less than 2 characters' do
+    song_params = {
+      song: {
+        title: 'testing title',
+        artist: 't',
+        image: 'testing image'
       }
     }
     post '/songs', params: song_params
     json = JSON.parse(response.body)
     expect(json['artist']).to include 'is too short (minimum is 2 characters)'
   end
+
+  it 'does not create duplicate songs for the same user' do
+    same_song = Song.create(
+      title: "i miss the old Kanye",
+      artist: "Kanye",
+      image: "test image",
+    )
+    expect(same_song.errors[:title]).to_not be_empty
+  end
+
 end
