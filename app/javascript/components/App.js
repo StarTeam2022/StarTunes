@@ -11,7 +11,6 @@ import SongNew from './pages/SongNew'
 import SongIndex from './pages/SongIndex'
 import SongShow from './pages/SongShow'
 import About from './pages/About'
-import './App.css'
 import NotFound from './pages/NotFound'
 
 

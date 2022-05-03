@@ -183,37 +183,37 @@ const randomSongs = [
     id: 31,
     title: "Santeria",
     artist: "Sublime",
-    Image: "https://www.google.com/search?q=santeria+Sublime+album&tbm=isch&source=iu&ictx=1&vet=1&fir=GFXrD1OctHcVsM%252CVNNTb0jtOlB0AM%252C%252Fg%252F11dfx_vx9f&usg=AI4_-kR6G6wHz7kBNLsha2QZ27XtFntKnA&sa=X&ved=2ahUKEwiT057kmML3AhXHDkQIHZVzC4kQ_B16BAgIEAE&biw=1143&bih=616&dpr=2#imgrc=GFXrD1OctHcVsM"
+    image: "https://m.media-amazon.com/images/I/813hVPLY3XL._SS500_.jpg"
   },
   {
     id: 32,
     title: "Handlebars",
     artist: "Flobots",
-    Image: "https://www.google.com/search?q=handlebars+flobots+album&tbm=isch&ved=2ahUKEwi2hI6MncL3AhWyAzQIHazWAuAQ2-cCegQIABAA&oq=handlebars+flobots+album&gs_lcp=CgNpbWcQAzoFCAAQgAQ6BggAEAcQHjoGCAAQCBAeOgQIABAYOgQIABAeOgYIABAFEB5Q8gJYgBVgwhZoAnAAeACAAVyIAYkGkgEBOZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=0otwYrbTGbKH0PEPrK2LgA4&bih=616&biw=1143&hl=en#imgrc=3VAT-t9Z7Cn82M"
+    image: "https://i.scdn.co/image/ab67616d0000b2739c42c35d57212a5920c42f6c"
   },
   {
     id: 33,
     title: "Fancy",
     artist: "Iggy Azalea",
-    Image: "https://www.google.com/search?q=Iggy+Azalea+The+New+Classic&hl=en&stick=H4sIAAAAAAAAAONgFuLRT9c3LDTNMjNKSi9Q4tLP1TeoNElOTjHU4nPOz83NzwvOTEktT6wsXsQq7ZmeXqngWJWYk5qoEJKRquCXWq7gnJNYXJyZDAC9YyNKSgAAAA&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiFncigmcL3AhVdDEQIHX_BCxoQ_AUoAXoECAIQAw&biw=1143&bih=616&dpr=2#imgrc=UHLtYfL5FYdbbM"
+    image: "https://e.snmc.io/i/1200/s/6c222a6e935692a674331cffe8e54bd3/5112744"
   },
   {
     id: 34,
     title: "Money",
     artist: "Cardi B",
-    Image: "https://www.google.com/search?q=cardi+b+money+album&tbm=isch&ved=2ahUKEwiZ7oCkmcL3AhUkKjQIHZMdCWsQ2-cCegQIABAA&oq=cardi+b+money+album&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEOgQIABBDOgQIABAYOgcIABCxAxBDOggIABCABBCxAzoLCAAQgAQQsQMQgwE6CggAELEDEIMBEEM6CAgAELEDEIMBOgQIABADUIsRWOpdYO1faABwAHgAgAFliAH8DZIBBDE5LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=0odwYpm9MKTU0PEPk7uk2AY&bih=616&biw=1143&hl=en#imgrc=HxCDNdieISVknM"
+    image: "https://lastfm.freetls.fastly.net/i/u/770x0/c3238ecd645993008f29d041c7666031.jpg"
   },
   {
     id: 35,
     title: "The Bird and the Worm",
     artist: "The Used",
-    Image: "https://www.google.com/search?q=The+Used+Lies+for+the+Liars&hl=en&stick=H4sIAAAAAAAAAONgFuLUz9U3MDE0SzZV4gIxjdMNCyuLtcSzk630c0uLM5P1E4tKMotLrBJzkkpzixexSodkpCqEFqemKPhkphYrpOUXKZQARXwyE4uKAU7DzxhQAAAA&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiYufzomsL3AhXYDkQIHbG1DzMQ_AUoAXoECAIQAw&biw=1143&bih=616&dpr=2#imgrc=6l-mnDf2wUe7cM"
+    image: "https://i.scdn.co/image/ab67616d0000b27361edd52cf2ab75bfb867f9c2"
   },
   {
     id: 36,
     title: "Give 'Em Hell, Kid",
     artist: "My Chemical Romance",
-    Image: "https://www.google.com/search?q=my+chemical+romance+give+em+hell+kid+album&hl=en&tbm=isch&source=lnms&sa=X&ved=2ahUKEwj2ufG_msL3AhVxEEQIHaBqCY8Q_AUoAnoECAEQBA&biw=1143&bih=616&dpr=2#imgrc=gX5AW-MzLEYPUM"
+    image: "https://i.scdn.co/image/ab67616d0000b273cab7ae4868e9f9ce6bdfdf43"
   },
   {
     id: 37,
