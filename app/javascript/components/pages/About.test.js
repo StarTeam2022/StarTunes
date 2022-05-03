@@ -44,7 +44,7 @@ describe("When About Renders", () => {
   });
 
   it("checks all image's prop for Ryan", () => {
-    const imgRyan = about.find("CardImg").first()
+    const imgRyan = about.find("CardImg").at(3)
     expect(imgRyan.prop("alt")).toEqual("ryan")
     expect(imgRyan.prop("src")).toEqual(ryan)
   })
@@ -56,13 +56,13 @@ describe("When About Renders", () => {
   })
 
   it("checks all image's props for Stevie", () => {
-    const imgStevie = about.find("CardImg").at(2)
+    const imgStevie = about.find("CardImg").first()
     expect(imgStevie.prop("alt")).toEqual("stevie")
     expect(imgStevie.prop("src")).toEqual(stevie)
   })
 
   it("checks all image's props for Arnold", () => {
-    const imgArnold = about.find("CardImg").at(3)
+    const imgArnold = about.find("CardImg").at(2)
     expect(imgArnold.prop("alt")).toEqual("arnold")
     expect(imgArnold.prop("src")).toEqual(arnold)
   })
